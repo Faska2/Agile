@@ -9,12 +9,28 @@
     --code-text: #dfe6e9;
     --border-radius: 8px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-transform: translateY(-2px);
+    --hover-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.dark-mode {
+    --primary-color: #ecf0f1;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --text-color: #ecf0f1;
+    --bg-color: #1a1a1a;
+    --card-bg: #2c3e50;
+    --code-bg: #000000;
+    --code-text: #00ff00;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    --hover-shadow: 0 6px 12px rgba(255,255,255,0.05);
 }
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
@@ -23,6 +39,58 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
     padding: 20px;
+}
+
+/* RTL Support */
+body.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+body.rtl .toc {
+    border-left: none;
+    border-right: 5px solid var(--secondary-color);
+}
+
+body.rtl .toc a:hover {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+body.rtl .answer ul {
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.controls {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+body.rtl .controls {
+    right: auto;
+    left: 20px;
+}
+
+.control-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.control-btn:hover {
+    transform: scale(1.05);
+    background-color: #2980b9;
 }
 
 .document-container {
@@ -48,13 +116,14 @@ header h1 {
 }
 
 .subtitle {
-    color: #7f8c8d;
+    color: var(--text-color);
+    opacity: 0.8;
     font-size: 1.2rem;
     font-weight: 300;
 }
 
 .toc {
-    background-color: #ecf0f1;
+    background-color: rgba(52, 152, 219, 0.1);
     padding: 20px;
     border-radius: var(--border-radius);
     margin-bottom: 40px;
@@ -79,7 +148,8 @@ header h1 {
     text-decoration: none;
     color: var(--primary-color);
     font-weight: 500;
-    transition: color 0.3s;
+    transition: color 0.3s, padding 0.3s;
+    display: block;
 }
 
 .toc a:hover {
@@ -93,8 +163,12 @@ section {
 
 .section-header {
     margin-bottom: 25px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
     padding-bottom: 10px;
+}
+
+.dark-mode .section-header {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .section-header h2 {
@@ -105,24 +179,34 @@ section {
 .qa-item {
     margin-bottom: 30px;
     padding: 20px;
-    border: 1px solid #eee;
+    border: 1px solid rgba(0,0,0,0.1);
     border-radius: var(--border-radius);
     transition: transform 0.2s, box-shadow 0.2s;
+    background-color: rgba(255,255,255,0.02);
+}
+
+.dark-mode .qa-item {
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .qa-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+    transform: var(--hover-transform);
+    box-shadow: var(--hover-shadow);
 }
 
 .qa-item h3 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 15px;
     font-size: 1.3rem;
 }
 
+.dark-mode .qa-item h3 {
+    color: #5dade2;
+}
+
 .answer {
-    color: #555;
+    color: var(--text-color);
+    opacity: 0.9;
 }
 
 .answer ul {
@@ -131,7 +215,7 @@ section {
 }
 
 .answer li {
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 .code-block {
@@ -143,20 +227,31 @@ section {
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
     font-size: 0.9rem;
     margin-top: 15px;
+    border: 1px solid #444;
+}
+
+body.rtl .code-block {
+    direction: ltr;
+    text-align: left;
 }
 
 footer {
     text-align: center;
     margin-top: 60px;
     padding-top: 20px;
-    border-top: 1px solid #ddd;
-    color: #7f8c8d;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    color: var(--text-color);
     font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.dark-mode footer {
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
 footer p:first-child {
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 5px;
 }
 
@@ -168,6 +263,7 @@ footer p:first-child {
     
     .document-container {
         padding: 20px;
+        padding-top: 60px; /* Space for controls */
     }
     
     header h1 {
@@ -180,5 +276,15 @@ footer p:first-child {
     
     .qa-item h3 {
         font-size: 1.1rem;
+    }
+
+    .controls {
+        top: 10px;
+        right: 10px;
+    }
+
+    body.rtl .controls {
+        left: 10px;
+        right: auto;
     }
 }
