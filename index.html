@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Agile, Scrum, Jira, Git & DevOps</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="document-container">
+        <header>
+            <h1>Guide de Révision Technique</h1>
+            <p class="subtitle">Méthodes Agile, Scrum, Jira, Git, GitHub et DevOps</p>
+        </header>
+
+        <nav class="toc">
+            <h2>Table des Matières</h2>
+            <ul>
+                <li><a href="#agile-scrum">Méthodes Agile et Scrum</a></li>
+                <li><a href="#jira">Jira</a></li>
+                <li><a href="#git-github">Git et GitHub</a></li>
+                <li><a href="#devops">DevOps</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="agile-scrum">
+                <div class="section-header">
+                    <h2>Méthodes Agile et Scrum</h2>
+                </div>
+
+                <article class="qa-item">
+                    <h3>Q1 : Quels sont les inconvénients des méthodes prévisibles : Cascade, Y et V ?</h3>
+                    <div class="answer">
+                        <p>Les inconvénients des méthodes prévisibles (Waterfall/Cascade, Y, V) sont :</p>
+                        <ul>
+                            <li>Manque de flexibilité : difficile de modifier les exigences une fois le développement commencé</li>
+                            <li>Livraison tardive du produit fonctionnel : le client ne voit le résultat qu'à la fin</li>
+                            <li>Risque élevé : si une erreur est détectée tardivement, elle est coûteuse à corriger</li>
+                            <li>Communication limitée avec le client pendant le développement</li>
+                            <li>Adaptation difficile aux changements technologiques ou de marché</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q2 : Quels sont les avantages des méthodes agiles ?</h3>
+                    <div class="answer">
+                        <p>Les avantages des méthodes agiles sont :</p>
+                        <ul>
+                            <li>Flexibilité et adaptabilité aux changements</li>
+                            <li>Livraisons fréquentes et incrémentales de fonctionnalités</li>
+                            <li>Collaboration étroite avec le client et les parties prenantes</li>
+                            <li>Réduction des risques grâce aux retours rapides</li>
+                            <li>Amélioration continue du processus et du produit</li>
+                            <li>Équipes auto-organisées et autonomes</li>
+                            <li>Satisfaction client accrue</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q3 : Définir la méthode Agile</h3>
+                    <div class="answer">
+                        <p>La méthode Agile est une approche de gestion de projet et de développement de logiciel qui met l'accent sur la flexibilité, la collaboration client, la livraison rapide de valeur et l'adaptation aux changements. Elle repose sur 4 valeurs fondamentales :</p>
+                        <ul>
+                            <li>Les individus et leurs interactions plus que les processus et les outils</li>
+                            <li>Des logiciels fonctionnels plus qu'une documentation exhaustive</li>
+                            <li>La collaboration avec les clients plus que la négociation contractuelle</li>
+                            <li>L'adaptation au changement plus que le suivi d'un plan</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q4 : Définir un sprint</h3>
+                    <div class="answer">
+                        <p>Un sprint est une période de temps fixe (généralement de 1 à 4 semaines) pendant laquelle l'équipe Scrum travaille pour accomplir un ensemble de travail défini et convenu. À la fin de chaque sprint, l'équipe devrait avoir livré un incrément de produit potentiellement livrable.</p>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q5 : Quelles sont les rôles dans Scrum ?</h3>
+                    <div class="answer">
+                        <p>Les rôles dans Scrum sont :</p>
+                        <ul>
+                            <li><strong>Product Owner :</strong> Responsable de maximiser la valeur du produit, gère le Product Backlog</li>
+                            <li><strong>Scrum Master :</strong> Facilitateur qui s'assure que l'équipe suit les principes et pratiques Scrum</li>
+                            <li><strong>Équipe de développement :</strong> Groupe de professionnels qui réalisent le travail</li>
+                            <li><strong>Les parties prenantes :</strong> Personnes intéressées par le produit mais ne faisant pas directement partie de l'équipe Scrum</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q6 : Quel est le rôle de Scrum Master ?</h3>
+                    <div class="answer">
+                        <p>Le Scrum Master est un servant-leader qui :</p>
+                        <ul>
+                            <li>Facilite les événements Scrum</li>
+                            <li>Élimine les obstacles qui gênent l'équipe</li>
+                            <li>Coache l'équipe dans les pratiques Scrum</li>
+                            <li>Protège l'équipe des distractions externes</li>
+                            <li>Aide à l'amélioration continue</li>
+                            <li>S'assure que l'équipe reste productive et focalisée</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q7 : Quelles sont les événements (étapes) dans Scrum ?</h3>
+                    <div class="answer">
+                        <p>Les événements Scrum sont :</p>
+                        <ul>
+                            <li><strong>Sprint Planning :</strong> Planification du travail à réaliser pendant le sprint</li>
+                            <li><strong>Daily Scrum :</strong> Réunion quotidienne de 15 minutes pour synchroniser l'équipe</li>
+                            <li><strong>Sprint Review :</strong> Présentation du travail accompli aux parties prenantes</li>
+                            <li><strong>Sprint Retrospective :</strong> Réflexion sur le processus pour s'améliorer</li>
+                            <li><strong>Le Sprint lui-même :</strong> La période de temps pour réaliser le travail</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q8 : Quels sont les 3 Artéfacts (produits) Scrum ?</h3>
+                    <div class="answer">
+                        <p>Les 3 artefacts Scrum sont :</p>
+                        <ul>
+                            <li><strong>Product Backlog :</strong> Liste priorisée de tout ce qui pourrait être nécessaire au produit</li>
+                            <li><strong>Sprint Backlog :</strong> Ensemble des éléments du Product Backlog sélectionnés pour un sprint</li>
+                            <li><strong>Incrément de produit :</strong> Somme de tous les éléments du Product Backlog terminés jusqu'à présent</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q9 : Donner des exemples de User Stories</h3>
+                    <div class="answer">
+                        <p>Exemples de User Stories :</p>
+                        <ul>
+                            <li>"En tant qu'utilisateur, je veux pouvoir me connecter avec mon email et mon mot de passe pour accéder à mon compte"</li>
+                            <li>"En tant qu'administrateur, je veux pouvoir exporter les données des utilisateurs au format CSV pour les analyser"</li>
+                            <li>"En tant que client, je veux pouvoir suivre ma commande en temps réel pour savoir quand elle sera livrée"</li>
+                            <li>"En tant qu'acheteur, je veux pouvoir ajouter des articles à mon panier pour les acheter plus tard"</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section id="jira">
+                <div class="section-header">
+                    <h2>Jira</h2>
+                </div>
+
+                <article class="qa-item">
+                    <h3>Q10 : Quel est le but de Jira ?</h3>
+                    <div class="answer">
+                        <p>Jira est une plateforme de gestion de projet et de suivi des problèmes développée par Atlassian. Elle permet de :</p>
+                        <ul>
+                            <li>Planifier, suivre et gérer les projets agiles</li>
+                            <li>Organiser le travail en sprints et backlogs</li>
+                            <li>Suivre les bugs et les tâches</li>
+                            <li>Collaborer en équipe</li>
+                            <li>Générer des rapports sur l'avancement des projets</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q11 : Définir : ticket, Epic, story, tâche, bug, BackLog</h3>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>Ticket :</strong> Élément de travail dans Jira qui représente une tâche, un bug, une histoire, etc.</li>
+                            <li><strong>Epic (Épopée) :</strong> Gros travail qui peut être décomposé en plusieurs stories ou tâches plus petites</li>
+                            <li><strong>Story :</strong> Fonctionnalité du point de vue de l'utilisateur, généralement formulée comme une User Story</li>
+                            <li><strong>Tâche :</strong> Travail technique à réaliser pour compléter une story</li>
+                            <li><strong>Bug :</strong> Erreur ou problème dans le code qui doit être corrigé</li>
+                            <li><strong>BackLog :</strong> Liste priorisée de tout le travail à réaliser dans un projet</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q12 : Quels sont les types de ticket ?</h3>
+                    <div class="answer">
+                        <p>Les types de ticket courants dans Jira sont :</p>
+                        <ul>
+                            <li><strong>Tâche (Task) :</strong> Action technique à réaliser</li>
+                            <li><strong>Bug :</strong> Erreur à corriger</li>
+                            <li><strong>Story :</strong> Fonctionnalité à réaliser du point de vue utilisateur</li>
+                            <li><strong>Epic :</strong> Grande fonctionnalité regroupant plusieurs stories</li>
+                            <li><strong>Sous-tâche (Sub-task) :</strong> Partie d'une tâche ou d'une story plus grande</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q13 : Quelles sont les étapes d'un ticket ? (à faire - en cours - terminé)</h3>
+                    <div class="answer">
+                        <p>Les étapes typiques d'un ticket dans Jira sont :</p>
+                        <ul>
+                            <li><strong>À faire (To Do) :</strong> Le ticket est créé mais pas encore commencé</li>
+                            <li><strong>En cours (In Progress) :</strong> Quelqu'un travaille activement sur le ticket</li>
+                            <li><strong>En révision (In Review) :</strong> Le travail est terminé et en attente de validation</li>
+                            <li><strong>Terminé (Done) :</strong> Le travail est validé et complété</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q14 : Quel est le rôle du BackLog dans Jira Software ?</h3>
+                    <div class="answer">
+                        <p>Le BackLog dans Jira Software est :</p>
+                        <ul>
+                            <li>L'ensemble des sprints prévus pour un projet</li>
+                            <li>Une liste priorisée de tout le travail à réaliser</li>
+                            <li>Un espace où le Product Owner gère et priorise les éléments</li>
+                            <li>La source de travail pour les sprints futurs</li>
+                            <li>Un outil de planification visuel pour l'équipe</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section id="git-github">
+                <div class="section-header">
+                    <h2>Git et GitHub</h2>
+                </div>
+
+                <article class="qa-item">
+                    <h3>Q15 : Quel est le but de Git ?</h3>
+                    <div class="answer">
+                        <p>Git est un système de contrôle de version distribué qui permet de :</p>
+                        <ul>
+                            <li>Suivre les modifications dans le code source</li>
+                            <li>Travailler en collaboration sur des projets</li>
+                            <li>Garder un historique complet des changements</li>
+                            <li>Créer des branches pour développer des fonctionnalités séparément</li>
+                            <li>Revenir à des versions précédentes si nécessaire</li>
+                            <li>Fusionner les modifications de plusieurs développeurs</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q16 : Quel est le but de GitHub ?</h3>
+                    <div class="answer">
+                        <p>GitHub est une plateforme d'hébergement de code qui permet de :</p>
+                        <ul>
+                            <li>Héberger des dépôts Git en ligne</li>
+                            <li>Collaborer avec d'autres développeurs</li>
+                            <li>Suivre et gérer les problèmes (issues)</li>
+                            <li>Gérer les demandes de fusion (pull requests)</li>
+                            <li>Mettre en place des intégrations continues (CI/CD)</li>
+                            <li>Créer des pages web pour les projets</li>
+                            <li>Participer à des projets open source</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q17 : Expliquer les commandes Git de base</h3>
+                    <div class="answer">
+                        <div class="code-block">
+                            <pre><code># Créer un dossier
+mkdir nom_du_dossier
+
+# Se placer dans le dossier créé
+cd nom_du_dossier
+
+# Initialiser le dépôt local
+git init
+
+# Créer des fichiers
+touch fichier1.txt fichier2.txt
+
+# Afficher l'état de la sauvegarde
+git status
+
+# Ajouter les fichiers à l'index local
+git add fichier1.txt fichier2.txt
+# ou pour ajouter tous les fichiers
+git add .
+
+# Valider les fichiers dans le repo local avec un message
+git commit -m "Message de commit descriptif"
+
+# Créer une branche css
+git branch css
+
+# Lister les branches créées
+git branch
+
+# Basculer sur la branche css
+git checkout css
+
+# Fusionner les branches dans la branche principale master
+git checkout master
+git merge css
+
+# Saisir les informations du compte GitHub
+git config --global user.name "Votre Nom"
+git config --global user.email "votre.email@example.com"
+
+# Pousser l'index local vers un repo distant dans GitHub
+git remote add origin https://github.com/userName/ProjetGitHub.git
+git push -u origin master
+
+# Copier le repo à partir de GitHub vers un dossier local
+git clone https://github.com/userName/ProjetGitHub.git
+
+# Afficher l'historique des commits
+git log
+
+# Afficher les modifications faites dans une branche
+git diff nom_branche
+
+# Importer un contenu de GitHub et le fusionner dans un contenu local
+git pull origin master
+
+# Supprimer une branche
+git branch -d nom_branche
+
+# Supprimer un fichier du repo local (index)
+git rm nom_fichier
+git commit -m "Suppression du fichier nom_fichier"</code></pre>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section id="devops">
+                <div class="section-header">
+                    <h2>DevOps</h2>
+                </div>
+
+                <article class="qa-item">
+                    <h3>Q18 : Quel est le rôle de DevOps ?</h3>
+                    <div class="answer">
+                        <p>DevOps est une approche qui combine le développement (Dev) et les opérations (Ops) pour :</p>
+                        <ul>
+                            <li>Accélérer le cycle de vie du développement</li>
+                            <li>Améliorer la collaboration entre les équipes de développement et d'exploitation</li>
+                            <li>Automatiser les processus d'intégration, de test et de déploiement</li>
+                            <li>Assurer une livraison continue de valeur aux clients</li>
+                            <li>Réduire les erreurs humaines grâce à l'automatisation</li>
+                            <li>Améliorer la qualité et la fiabilité des logiciels</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q19 : Quel est le rôle de Kubernetes, Jira/Trello, Jenkins, Git, GitHub, runner ?</h3>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>Kubernetes :</strong> Système d'orchestration de conteneurs qui automatise le déploiement, la mise à l'échelle et la gestion des applications conteneurisées</li>
+                            <li><strong>Jira/Trello :</strong> Outils de gestion de projet et de suivi des tâches pour organiser le travail et collaborer en équipe</li>
+                            <li><strong>Jenkins :</strong> Serveur d'automatisation qui permet de construire, tester et déployer des logiciels (outil d'intégration continue)</li>
+                            <li><strong>Git :</strong> Système de contrôle de version pour suivre les changements dans le code source</li>
+                            <li><strong>GitHub :</strong> Plateforme d'hébergement de code basée sur Git pour la collaboration et la gestion de projet</li>
+                            <li><strong>Runner :</strong> Outil qui exécute des tâches automatisées dans un pipeline CI/CD (par exemple, GitLab Runner)</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="qa-item">
+                    <h3>Q20 : Définir : CI/CD, pipeline</h3>
+                    <div class="answer">
+                        <ul>
+                            <li><strong>CI/CD (Continuous Integration/Continuous Delivery or Deployment) :</strong>
+                                <ul>
+                                    <li><strong>Intégration Continue (CI) :</strong> Pratique où les développeurs intègrent régulièrement leur code dans un dépôt central, après quoi des builds et des tests automatisés sont exécutés</li>
+                                    <li><strong>Livraison/Déploiement Continu (CD) :</strong> Pratique où les changements de code sont automatiquement préparés pour une release en production</li>
+                                </ul>
+                            </li>
+                            <li><strong>Pipeline :</strong> Ensemble de processus automatisés qui permettent de déplacer le logiciel du développement à la production. Un pipeline CI/CD typique inclut des étapes de build, de test, et de déploiement automatisées.</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p>Faska Elouaaziki Version</p>
+            <p>&copy; 2026 Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>
